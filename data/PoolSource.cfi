@@ -1,0 +1,25 @@
+# actual location is /pnfs/cms/WAX/11/
+source = PoolSource
+{
+   untracked vstring fileNames = 
+   {
+       /*
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/ACC9E9D3-7826-DB11-9F7F-00304876A15B.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/50E66514-7926-DB11-95AC-00304875A9B5.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/840E7804-7A26-DB11-A9C6-00304875628B.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/00768D75-7926-DB11-89D9-003048767E49.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/488E2F9E-7B26-DB11-BC34-00304875A9E9.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/C050A601-7B26-DB11-8676-00304875A337.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/AA783352-7C26-DB11-83D6-003048767ED1.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/16F569DD-7C26-DB11-9CDE-00304875ABEF.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/A0B1247C-7D26-DB11-AAF3-003048767DF5.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/8AB5F656-7E26-DB11-85C0-003048769D4B.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/400F49F3-7F26-DB11-B17D-003048767EFD.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/D21CDE37-7F26-DB11-BD85-003048754E55.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/98047C46-C526-DB11-90EE-00304876A147.root",
+       "/store/PreProd/2006/8/7/PreProd090pre3Minbias/DE5B1E43-C526-DB11-80EB-00304875A8E7.root"
+       */
+       "file:MC_detsim.root"
+   }
+   untracked int32 maxEvents = 10000
+}

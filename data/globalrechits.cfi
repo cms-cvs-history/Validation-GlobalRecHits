@@ -1,0 +1,46 @@
+module globalrechits = GlobalRecHitsProducer
+{
+    untracked string Name = "GlobalRecHitsProducer"
+    untracked int32 Verbosity = 0  # 0 provides no output
+                                   # 1 provides basic output
+                                   # 2 provides output of the fill step + 1
+                                   # 3 provides output of the store step + 2
+    string Label = "GlobalRecHits"
+    untracked int32 Frequency = 50
+    
+    // as of 110p2, needs to be 1. Anything ealier should be 0.
+    untracked int32 VtxUnit = 1    # 0 assumes mm in SimVertex
+                                   # 1 assumes cm in SimVertex
+ 
+    PSet ProvenanceLookup =
+    {
+	untracked bool GetAllProvenances = false
+	untracked bool PrintProvenanceInfo = false
+    }
+    
+    // as of 090p3 should be g4SimHits. Anything earlier SimG4Object
+    InputTag PxlBrlLowSrc = g4SimHits:TrackerHitsPixelBarrelLowTof
+    InputTag PxlBrlHighSrc = g4SimHits:TrackerHitsPixelBarrelHighTof
+    InputTag PxlFwdLowSrc = g4SimHits:TrackerHitsPixelEndcapLowTof
+    InputTag PxlFwdHighSrc = g4SimHits:TrackerHitsPixelEndcapHighTof
+    
+    InputTag SiTIBLowSrc = g4SimHits:TrackerHitsTIBLowTof
+    InputTag SiTIBHighSrc = g4SimHits:TrackerHitsTIBHighTof
+    InputTag SiTOBLowSrc = g4SimHits:TrackerHitsTOBLowTof
+    InputTag SiTOBHighSrc = g4SimHits:TrackerHitsTOBHighTof
+    InputTag SiTIDLowSrc = g4SimHits:TrackerHitsTIDLowTof
+    InputTag SiTIDHighSrc = g4SimHits:TrackerHitsTIDHighTof
+    InputTag SiTECLowSrc = g4SimHits:TrackerHitsTECLowTof
+    InputTag SiTECHighSrc = g4SimHits:TrackerHitsTECHighTof
+    
+    InputTag MuonCscSrc = g4SimHits:MuonCSCHits
+    InputTag MuonDtSrc = g4SimHits:MuonDTHits
+    InputTag MuonRpcSrc = g4SimHits:MuonRPCHits
+    
+    InputTag ECalEBSrc = g4SimHits:EcalHitsEB
+    InputTag ECalEESrc = g4SimHits:EcalHitsEE
+    InputTag ECalESSrc = g4SimHits:EcalHitsES
+    
+    InputTag HCalSrc = g4SimHits:HcalHits
+    
+}
