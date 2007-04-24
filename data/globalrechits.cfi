@@ -24,7 +24,9 @@ module globalrechits = GlobalRecHitsProducer
     InputTag ECalUncalEESrc = ecalWeightUncalibRecHit:EcalUncalibRecHitsEE
     InputTag ECalESSrc = ecalPreshowerRecHit:EcalRecHitsES
     InputTag HCalSrc   = g4SimHits:HcalHits
-    InputTag SiStripSrc = siStripDigis
+    InputTag SiStripSrc = siStripMatchedRecHits:matchedRecHit
+
+
     InputTag SiPxlSrc = siPixelDigis
     InputTag MuDTSrc = muonDTDigis
     InputTag MuCSCSrc = muonCSCDigis:MuonCSCStripDigi
