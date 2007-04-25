@@ -26,9 +26,9 @@ module globalrechits = GlobalRecHitsProducer
     InputTag HCalSrc   = g4SimHits:HcalHits
     InputTag SiStripSrc = siStripMatchedRecHits:matchedRecHit
     InputTag SiPxlSrc = siPixelRecHits
+    InputTag MuDTSrc = dt1DRecHits
+    InputTag MuDTSimSrc = g4SimHits:MuonDTHits
 
-
-    InputTag MuDTSrc = muonDTDigis
     InputTag MuCSCSrc = muonCSCDigis:MuonCSCStripDigi
     InputTag MuRPCSrc = muonCSCDigis:MuonCSCWireDigi
 
