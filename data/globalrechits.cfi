@@ -28,8 +28,8 @@ module globalrechits = GlobalRecHitsProducer
     InputTag SiPxlSrc = siPixelRecHits
     InputTag MuDTSrc = dt1DRecHits
     InputTag MuDTSimSrc = g4SimHits:MuonDTHits
-
-    InputTag MuCSCSrc = muonCSCDigis:MuonCSCStripDigi
-    InputTag MuRPCSrc = muonCSCDigis:MuonCSCWireDigi
+    InputTag MuCSCSrc = csc2DRecHits
+    InputTag MuRPCSrc = rpcRecHits
+    InputTag MuRPCSimSrc = grSimHits:MuonRPCHits
 
 }
