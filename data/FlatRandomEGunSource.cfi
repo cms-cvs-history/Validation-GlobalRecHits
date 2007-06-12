@@ -13,7 +13,7 @@
 #
 source = FlatRandomEGunSource
 {
-   untracked int32 maxEvents = 5
+   //untracked int32 maxEvents = 5
    untracked PSet PGunParameters =
    {
       #you can request more than 1 particle
