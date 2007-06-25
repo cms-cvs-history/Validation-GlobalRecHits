@@ -15,16 +15,16 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   //http://root.cern.ch/root/html/src/TStyle.cxx.html#TStyle:SetOptStat
   gStyle->SetOptStat("emruo");
 
-  // setup names
-  //TString srcname = "GlobalRecHits.root";
-  TString treename = "Events";
-  TString brnchname = "PGlobalRecHit_globalrechits_GlobalRecHits_GLOBAL.obj";
-
   // clear memory of file name
   delete gROOT->GetListOfFiles()->FindObject(srcname);
 
   // open source file
   TFile *srcfile = new TFile(srcname);
+
+  // setup names
+  //TString srcname = "GlobalRecHits.root";
+  TString treename = "Events";
+  TString brnchname = "PGlobalRecHit_globalrechits_GlobalRecHits_GLOBAL.obj";
   
   // get tree from file
   TTree *srcevts = dynamic_cast<TTree*>(srcfile->Get(treename));
@@ -73,9 +73,9 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   // ecal
   TH1F *hEcaln[3];
   hEcaln[0] = 
-    new TH1F("hEcaln_EE","EECal rechits",50,100.,300.);
+    new TH1F("hEcaln_EE","EECal rechits",700,6000.,20000.);
   hEcaln[1] = 
-    new TH1F("hEcaln_EB","EBCal rechits",200,2000.,3500.);
+    new TH1F("hEcaln_EB","EBCal rechits",100,60000.,62000.);
   hEcaln[2] =
     new TH1F("hEcaln_ES","ESCal rechits",50,100.,300.);
   TH1F *hEcalRes[3];
@@ -721,7 +721,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   myCanvas = Canvas1;
   for (Int_t i = 0; i < 3; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hEcaln[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -735,7 +735,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   myCanvas = Canvas2;
   for (Int_t i = 0; i < 4; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hHcaln[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -750,7 +750,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   myCanvas = Canvas3;
   for (Int_t i = 0; i < 19; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hSiStripn[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -768,7 +768,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   myCanvas = Canvas4;
   for (Int_t i = 0; i < 7; ++i) {
     myCanvas->cd(1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hSiPixeln[i]->Draw();
     myCanvas->cd(2);
     //gPad->SetLogy();
@@ -785,7 +785,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   Canvas5->Divide(2,2);
   myCanvas = Canvas5;
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hDtMuonn->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
@@ -798,7 +798,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   Canvas6->Divide(2,2);
   myCanvas = Canvas6;
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCSCn->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
@@ -811,7 +811,7 @@ void MakeHistograms(TString srcname="GlobalRecHits.root",
   Canvas7->Divide(2,2);
   myCanvas = Canvas7;
   myCanvas->cd(1);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hRPCn->Draw();
   myCanvas->cd(2);
   //gPad->SetLogy();
