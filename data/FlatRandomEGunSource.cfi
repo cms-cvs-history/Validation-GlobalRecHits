@@ -18,7 +18,7 @@ source = FlatRandomEGunSource
    {
       #you can request more than 1 particle
       #vint32  PartID = {211,11}
-      untracked vint32 PartID = { 13 } 
+      untracked vint32 PartID = { 13, 11, 211, 22 } 
       untracked double MinEta = -3.5
       untracked double MaxEta = 3.5
       untracked double MinPhi = -3.14159265358979323846 # must be in radians
