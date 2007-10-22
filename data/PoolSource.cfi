@@ -19,7 +19,7 @@ source = PoolSource
        "/store/PreProd/2006/8/7/PreProd090pre3Minbias/98047C46-C526-DB11-90EE-00304876A147.root",
        "/store/PreProd/2006/8/7/PreProd090pre3Minbias/DE5B1E43-C526-DB11-80EB-00304875A8E7.root"
        */
-       "file:MC_detsim.root"
+       "file:MinBias.root"
    }
    //untracked int32 maxEvents = 10000
 }

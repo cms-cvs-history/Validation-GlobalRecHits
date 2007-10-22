@@ -1,0 +1,55 @@
+module globalrechitsanalyze = GlobalRecHitsAnalyzer
+{
+    untracked string Name = "GlobalRecHitsAnalyzer"
+    untracked int32 Verbosity = 0  # 0 provides no output
+                                   # 1 provides basic output
+                                   # 2 provides output of the fill step + 1
+                                   # 3 provides output of the store step + 2
+    string outputFile = "GlobalRecHitsHistogramsAnalyze.root"
+    untracked int32 Frequency = 50
+    
+    // as of 110p2, needs to be 1. Anything ealier should be 0.
+    untracked int32 VtxUnit = 1    # 0 assumes mm in SimVertex
+                                   # 1 assumes cm in SimVertex
+ 
+    PSet ProvenanceLookup =
+    {
+	untracked bool GetAllProvenances = false
+	untracked bool PrintProvenanceInfo = false
+    }
+    
+    InputTag ECalEBSrc = ecalRecHit:EcalRecHitsEB
+    InputTag ECalUncalEBSrc = ecalWeightUncalibRecHit:EcalUncalibRecHitsEB
+    InputTag ECalEESrc = ecalRecHit:EcalRecHitsEE
+    InputTag ECalUncalEESrc = ecalWeightUncalibRecHit:EcalUncalibRecHitsEE
+    InputTag ECalESSrc = ecalPreshowerRecHit:EcalRecHitsES
+
+    InputTag HCalSrc   = g4SimHits:HcalHits
+    InputTag SiStripSrc = siStripMatchedRecHits:matchedRecHit
+    InputTag SiPxlSrc = siPixelRecHits
+    InputTag MuDTSrc = dt1DRecHits
+    InputTag MuDTSimSrc = g4SimHits:MuonDTHits
+    InputTag MuCSCSrc = csc2DRecHits
+    InputTag MuRPCSrc = rpcRecHits
+    InputTag MuRPCSimSrc = g4SimHits:MuonRPCHits
+
+    // needed for TrackerHitAssociator
+    bool associatePixel = true
+    bool associateStrip = true
+    bool associateRecoTracks = false
+    vstring ROUList = {
+    #For running only strip or pixel comment out the appropriate strings
+       #TIB
+       "TrackerHitsTIBLowTof","TrackerHitsTIBHighTof",
+       #TID
+       "TrackerHitsTIDLowTof","TrackerHitsTIDHighTof",
+       #TOB
+       "TrackerHitsTOBLowTof","TrackerHitsTOBHighTof",
+       #TEC
+       "TrackerHitsTECLowTof","TrackerHitsTECHighTof",
+       #BPIX
+       "TrackerHitsPixelBarrelLowTof","TrackerHitsPixelBarrelHighTof",
+       #FPIX
+       "TrackerHitsPixelEndcapLowTof","TrackerHitsPixelEndcapHighTof"
+    }
+}
