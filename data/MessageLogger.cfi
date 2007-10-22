@@ -30,7 +30,14 @@ service = MessageLogger
       "GlobalRecHitsProducer_storeHCal",
       "GlobalRecHitsProducer_clear",
       "ScheduleExecutionFailure",
-      "EventSetupDependency" 
+      "EventSetupDependency" ,
+      "GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer",
+      "GlobalRecHitsAnalyzer_endJob",
+      "GlobalRecHitsAnalyzer_produce",
+      "GlobalRecHitsAnalyzer_fillTrk",
+      "GlobalRecHitsAnalyzer_fillMuon",
+      "GlobalRecHitsAnalyzer_fillECal",
+      "GlobalRecHitsAnalyzer_fillHCal"
    }
 
    untracked PSet MessageLogger =
@@ -69,6 +76,26 @@ service = MessageLogger
       untracked PSet ScheduleExecutionFailure = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
+	{ untracked int32 limit = 10000000 }
+       untracked PSet GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_GlobalRecHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_analyze = 
 	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
@@ -109,6 +136,27 @@ service = MessageLogger
       //	{ untracked int32 limit = 10000000 }
       //untracked PSet EventSetupDependency = 
       //	{ untracked int32 limit = 10000000 }  
+       untracked PSet GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_GlobalRecHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+
    }
    untracked PSet cerr =
    {
@@ -148,6 +196,28 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 } 
+       untracked PSet GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_GlobalRecHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalRecHitsHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      
+
    }
 
    untracked PSet FrameworkJobReport = 
