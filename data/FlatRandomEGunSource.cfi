@@ -14,6 +14,7 @@
 source = FlatRandomEGunSource
 {
    //untracked int32 maxEvents = 5
+   untracked uint32 firstRun = 1
    untracked PSet PGunParameters =
    {
       #you can request more than 1 particle
@@ -27,4 +28,9 @@ source = FlatRandomEGunSource
       untracked double MaxE  = 10.01
    }
    untracked int32 Verbosity = 0 # set to 1 (or greater)  for printouts
+   untracked bool  AddAntiParticle = false   # if you turn it ON, for each 
+                                             # particle an anti-particle will 
+                                             # be generated,
+                                             # with 3-mom opposite to the 
+                                             #particle's   
 }

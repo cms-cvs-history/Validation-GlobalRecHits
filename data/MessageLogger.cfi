@@ -31,6 +31,8 @@ service = MessageLogger
       "GlobalRecHitsProducer_clear",
       "ScheduleExecutionFailure",
       "EventSetupDependency" ,
+      "Root_Warning",
+      "Root_Error",
       "GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer",
       "GlobalRecHitsAnalyzer_endJob",
       "GlobalRecHitsAnalyzer_produce",
@@ -77,6 +79,10 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet Root_Warning =
+        { untracked int32 limit = 10000000 }
+      untracked PSet Root_Error =
+        { untracked int32 limit = 10000000 }
        untracked PSet GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalRecHitsAnalyzer_endJob = 
@@ -196,6 +202,10 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 } 
+      untracked PSet Root_Warning =
+        { untracked int32 limit = 10000000 }
+      untracked PSet Root_Error =
+        { untracked int32 limit = 10000000 }
        untracked PSet GlobalRecHitsAnalyzer_GlobalRecHitsAnalyzer = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalRecHitsAnalyzer_endJob = 
