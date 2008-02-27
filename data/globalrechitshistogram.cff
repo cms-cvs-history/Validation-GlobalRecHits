@@ -1,5 +1,5 @@
 ## needed backend
-service = DaqMonitorROOTBackEnd{ }
+service = DQMStore{ }
 
 ## actual producer
 include "Validation/GlobalRecHits/data/globalrechitshistogram.cfi"
