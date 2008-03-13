@@ -6,6 +6,7 @@ module globalrechitshistogrammer = GlobalRecHitsHistogrammer
                                    # 2 provides output of the fill step + 1
                                    # 3 provides output of the store step + 2
     string outputFile = "GlobalRecHitsHistograms.root"
+    bool DoOutput = false
     untracked int32 Frequency = 50
     
     // as of 110p2, needs to be 1. Anything ealier should be 0.
