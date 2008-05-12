@@ -1,20 +1,57 @@
 service = RandomNumberGeneratorService
 {
+  PSet theSource = {
     untracked uint32 sourceSeed = 123456789
-    PSet moduleSeeds =
-    {
-        untracked uint32 VtxSmeared = 98765432
-        untracked uint32 g4SimHits  = 11
-        untracked uint32 mix        = 12345   
-        untracked uint32 simHcalDigis  = 11223344
+    untracked string engineName = "HepJamesRandom"
+  }
 
-        untracked uint32 simMuonCSCDigis = 11223344
-        untracked uint32 simMuonDTDigis  = 1234567
-        untracked uint32 simMuonRPCDigis = 1234567 
+  PSet VtxSmeared = {
+    untracked uint32 initialSeed = 98765432
+    untracked string engineName = "HepJamesRandom"
+  }
 
-        untracked uint32 simSiPixelDigis = 1234567
-        untracked uint32 simSiStripDigis = 1234567
+  PSet g4SimHits = {
+    untracked uint32 initialSeed  = 11
+    untracked string engineName = "HepJamesRandom"
+  }
 
-        untracked uint32 simEcalUnsuppressedDigis = 1234567
-    }
+  PSet mix = {
+    untracked uint32 initialSeed        = 12345   
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simHcalDigis = {
+    untracked uint32 initialSeed  = 11223344
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simMuonCSCDigis = {
+    untracked uint32 initialSeed = 11223344
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simMuonDTDigis = {
+    untracked uint32 initialSeed  = 1234567
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simMuonRPCDigis = {
+    untracked uint32 initialSeed = 1234567 
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simSiPixelDigis = {
+    untracked uint32 initialSeed = 1234567
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simSiStripDigis = {
+    untracked uint32 initialSeed = 1234567
+    untracked string engineName = "HepJamesRandom"
+  }
+
+  PSet simEcalUnsuppressedDigis = {
+    untracked uint32 initialSeed = 1234567
+    untracked string engineName = "HepJamesRandom"
+  }
 }           
