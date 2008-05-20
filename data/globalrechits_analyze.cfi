@@ -16,6 +16,8 @@ module globalrechitsanalyze = GlobalRecHitsAnalyzer
 	untracked bool GetAllProvenances = false
 	untracked bool PrintProvenanceInfo = false
     }
+
+    string hitsProducer = "g4SimHits"    
     
     InputTag ECalEBSrc = ecalRecHit:EcalRecHitsEB
     InputTag ECalUncalEBSrc = ecalWeightUncalibRecHit:EcalUncalibRecHitsEB
