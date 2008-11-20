@@ -1,5 +1,0 @@
-## needed backend
-service = DQMStore{ }
-
-## actual producer
-include "Validation/GlobalRecHits/data/globalrechitshistogram.cfi"
